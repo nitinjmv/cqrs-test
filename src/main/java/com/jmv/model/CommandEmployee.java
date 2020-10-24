@@ -6,9 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "employee")
-public class Employee {
+public class CommandEmployee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

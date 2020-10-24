@@ -2,15 +2,15 @@ package com.jmv.service;
 
 import org.springframework.stereotype.Service;
 
-import com.jmv.model.Employee;
-import com.jmv.repository.EmployeeRespository;
+import com.jmv.model.CommandEmployee;
+import com.jmv.repository.EmployeeSQLRespository;
 
 @Service
 public class CommandService {
 
-	private EmployeeRespository employeeRepository;
+	private EmployeeSQLRespository employeeRepository;
 
-	public Employee create(Employee employee) {
+	public CommandEmployee create(CommandEmployee employee) {
 		return employeeRepository.save(employee);
 	}
 	

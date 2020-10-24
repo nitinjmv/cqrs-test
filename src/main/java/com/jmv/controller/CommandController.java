@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jmv.model.Employee;
+import com.jmv.model.CommandEmployee;
 import com.jmv.service.CommandService;
 
 @RestController
@@ -19,7 +19,7 @@ public class CommandController {
 	private CommandService commandService;
 
 	@PostMapping
-	public ResponseEntity<Employee> create(@RequestBody Employee employee) {
+	public ResponseEntity<CommandEmployee> create(@RequestBody CommandEmployee employee) {
 		return new ResponseEntity<>(commandService.create(employee), HttpStatus.CREATED);
 	}
 }
